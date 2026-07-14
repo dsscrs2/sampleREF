@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
-<title>D S Senanayake College — Sports Academy Payment Reference</title>
+<title>D S Senanayake College — Air Rifle Fee · Online Transfer Payment Reference & Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -251,6 +251,37 @@
     pointer-events:none;
   }
 
+  .text-input{
+    width:100%;
+    height:54px;
+    padding:0 16px;
+    border-radius:10px;
+    border:1.5px solid var(--line);
+    background:#fdfcf9;
+    color:var(--ink);
+    font-family:'Manrope',sans-serif;
+    font-size:15.5px;
+    font-weight:600;
+    transition:border-color .15s ease, box-shadow .15s ease;
+  }
+  .text-input:focus{
+    outline:none;
+    border-color:var(--gold);
+    box-shadow:0 0 0 3px rgba(200,154,73,0.18);
+  }
+  .input-label{
+    display:block;
+    font-size:12.5px;
+    font-weight:700;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  .input-label .si{
+    display:inline;
+    font-weight:500;
+    margin-left:4px;
+  }
+
   .divider{
     height:1px;
     background:var(--line);
@@ -375,6 +406,32 @@
     font-weight:600;
   }
 
+  .payment-steps{
+    margin:16px 0 0;
+    padding:14px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    background:#fdfcf9;
+  }
+  .payment-steps-title{
+    margin:0 0 10px;
+    color:var(--ink);
+    font-size:13.5px;
+    font-weight:800;
+  }
+  .payment-steps ol{
+    margin:0;
+    padding-left:20px;
+  }
+  .payment-steps li{
+    margin:0 0 7px;
+    color:var(--ink-soft);
+    font-size:13px;
+    line-height:1.45;
+  }
+  .payment-steps li:last-child{ margin-bottom:0; }
+  .payment-steps strong{ color:var(--ink); }
+
   .summary{
     display:grid;
     grid-template-columns:auto 1fr;
@@ -496,6 +553,13 @@
       line-height:1.25;
       font-size:15px;
     }
+    .text-input{
+      height:auto;
+      min-height:52px;
+      padding:12px 14px;
+      line-height:1.25;
+      font-size:15px;
+    }
     .segment{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -577,224 +641,24 @@
     }
   }
 
-  /* ---- PDF Upload Card ---- */
-  .card-upload{
+  /* ---- Email Receipt Card ---- */
+  #uploadCard{
+    display:none;
     margin-top:20px;
   }
-  .upload-zone{
-    border:2px dashed var(--line);
-    border-radius:10px;
-    background:#fdfcf9;
-    padding:28px 20px;
-    text-align:center;
-    cursor:pointer;
-    transition:border-color .2s ease, background .2s ease;
-    position:relative;
-  }
-  .upload-zone:hover,
-  .upload-zone.drag-over{
-    border-color:var(--gold);
-    background:#fffbf2;
-  }
-  .upload-zone input[type="file"]{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    opacity:0;
-    cursor:pointer;
-  }
-  .upload-icon{
-    width:40px;height:40px;
-    margin:0 auto 10px;
-    background:var(--navy);
-    border-radius:10px;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .upload-icon svg{ display:block; }
-  .upload-label{
-    font-size:14.5px;
-    font-weight:700;
-    color:var(--ink);
-    margin:0 0 4px;
-  }
-  .upload-sub{
-    font-size:12.5px;
-    color:var(--ink-soft);
-    margin:0 0 14px;
-  }
-  .upload-howto{
-    text-align:left;
-    background:#f3f0e8;
-    border-radius:9px;
-    padding:13px 15px;
-    margin-top:4px;
-    pointer-events:none;
-  }
-  .howto-title{
-    font-size:12.5px;
-    font-weight:700;
-    color:var(--ink);
-    margin:0 0 9px;
-  }
-  .upload-howto ul{
-    margin:0 0 9px;
-    padding-left:16px;
-  }
-  .upload-howto ul li{
-    font-size:12px;
-    color:var(--ink-soft);
-    margin-bottom:6px;
-    line-height:1.5;
-  }
-  .upload-howto ul li strong{ color:var(--ink); }
-  .upload-howto ul li em{
-    font-style:normal;
-    background:#e8e4d8;
-    border-radius:3px;
-    padding:1px 4px;
-    font-size:11.5px;
-    font-weight:600;
-  }
-  .howto-note{
-    font-size:11.5px;
-    font-weight:600;
-    color:#7a5a1a;
-    background:#fff3cd;
-    border-radius:6px;
-    padding:7px 10px;
-    margin:0;
-    line-height:1.45;
-  }
-
-  .extract-result{
-    margin-top:16px;
-    display:none;
-  }
-  .extract-result.show{ display:block; }
-
-  .extract-filename{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:10px 14px;
-    background:#f3f0e8;
-    border-radius:8px;
-    margin-bottom:12px;
-    font-size:13px;
-    font-weight:600;
-    color:var(--ink);
-  }
-  .extract-filename span{
-    flex:1;
-    min-width:0;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-  }
-  .extract-remove{
-    background:none;
-    border:none;
-    cursor:pointer;
-    color:var(--ink-soft);
-    font-size:16px;
-    line-height:1;
-    padding:2px 4px;
-    border-radius:4px;
-    flex:0 0 auto;
-  }
-  .extract-remove:hover{ color:var(--ink); background:#e8e4da; }
-
-  .extract-status{
-    font-size:13px;
-    color:var(--ink-soft);
-    display:flex;
-    align-items:center;
-    gap:8px;
-    margin-bottom:10px;
-  }
-  .spinner{
-    width:14px;height:14px;
-    border:2px solid var(--line);
-    border-top-color:var(--navy);
-    border-radius:50%;
-    animation:spin .7s linear infinite;
-    flex:0 0 auto;
-  }
-  @keyframes spin{ to{ transform:rotate(360deg); } }
-
-  .extract-text-wrap{
-    position:relative;
-  }
-  .extract-text{
-    width:100%;
-    min-height:140px;
-    max-height:320px;
-    padding:14px;
-    border-radius:9px;
-    border:1.5px solid var(--line);
-    background:#fdfcf9;
-    font-family:'Manrope',sans-serif;
-    font-size:13px;
-    color:var(--ink);
-    resize:vertical;
-    line-height:1.6;
-    box-sizing:border-box;
-  }
-  .extract-text:focus{
-    outline:none;
-    border-color:var(--gold);
-    box-shadow:0 0 0 3px rgba(200,154,73,0.15);
-  }
-  .extract-copy-btn{
-    margin-top:10px;
-    background:var(--navy);
-    color:#fff;
-    border:none;
-    padding:9px 18px;
-    border-radius:8px;
-    font-family:'Manrope',sans-serif;
-    font-weight:700;
-    font-size:13px;
-    cursor:pointer;
-    transition:filter .15s ease, transform .1s ease;
-  }
-  .extract-copy-btn:hover{ filter:brightness(1.15); }
-  .extract-copy-btn:active{ transform:scale(0.97); }
-
-  .pdf-nudge{
-    margin-top:12px;
-    padding:11px 13px;
-    background:#fffbf0;
-    border:1px solid #e9d3a3;
-    border-left:4px solid var(--gold);
-    border-radius:8px;
-    font-size:12.5px;
-    color:#5a4010;
-    line-height:1.5;
-  }
-  .pdf-nudge .si{
+  #uploadCard.show{
     display:block;
-    margin-top:4px;
-    font-size:12px;
-    color:#7a5a20;
   }
-
-  .extract-error{
-    padding:12px 14px;
-    border:1px solid #f5c6c6;
-    border-left:4px solid #d94f4f;
+  .upload-note{
+    margin:0 0 14px;
+    padding:11px 13px;
     border-radius:8px;
-    background:#fff5f5;
-    color:#7a1f1f;
-    font-size:13px;
-    font-weight:600;
-    display:none;
-  }
-  .extract-error.show{ display:block; }
-
-  @media (max-width:520px){
-    .upload-zone{ padding:22px 14px; }
+    background:#fff8e7;
+    border-left:4px solid var(--gold);
+    color:#6f4d12;
+    font-size:12.5px;
+    font-weight:650;
+    line-height:1.5;
   }
 </style>
 </head>
@@ -805,8 +669,8 @@
     <div class="crest-ring" aria-hidden="true"></div>
     <div>
       <p class="eyebrow">D S Senanayake College<span class="si">ඩී.එස්. සේනානායක විද්‍යාලය</span></p>
-      <h1>Sports Academy<br>Payment Reference<span class="si">ක්‍රීඩා ඇකඩමි ගෙවීම් යොමුව</span></h1>
-      <p class="sub">Select your sport, name, and payment month to generate your unique bank transfer reference.<span class="si">යොමු අංකය ජනනය කිරීමට ඔබගේ ක්‍රීඩාව, නම සහ ගෙවීම් මාසය තෝරන්න.</span></p>
+      <h1>Air Rifle Fee —<br>Online Transfer Payment Reference & Guide<span class="si">වායු රයිෆල් ගාස්තු — අන්තර්ජාල මාරු ගෙවීම් යොමු හා මාර්ගෝපදේශය</span></h1>
+      <p class="sub">Generate your unique payment reference and follow the steps to complete your bank transfer.<span class="si">ඔබගේ ගෙවීම් යොමු අංකය ජනනය කර, බැංකු මාරුව සම්පූර්ණ කිරීමට පියවර අනුගමනය කරන්න.</span></p>
     </div>
   </div>
 </header>
@@ -830,6 +694,25 @@
           <option value="" selected disabled>Select your name…</option>
         </select>
       </div>
+      <p id="studentLoadError" class="reference-warning" style="display:none; margin-top:12px;">
+        Couldn't load the student list. <button id="retryStudentsBtn" type="button" style="background:var(--navy);color:#fff;border:none;padding:6px 12px;border-radius:7px;font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;cursor:pointer;margin-left:2px;">Try again</button><br>Still not working? Please refresh the page, or contact the office.
+        <span class="si">ශිෂ්‍ය ලැයිස්තුව load කළ නොහැකි විය. නැවත උත්සාහ කරන්න, නැතහොත් page එක refresh කරන්න, නැතහොත් කාර්යාලයට අමතන්න.</span>
+      </p>
+
+      <div id="manualStudentFields" style="display:none; margin-top:14px;">
+        <div class="reference-warning" style="margin-bottom:14px;">
+          Please confirm the index number with the office before paying — an incorrect number means the payment can't be matched to your child's account.
+          <span class="si">ගෙවීමට පෙර දර්ශක අංකය කාර්යාලයෙන් තහවුරු කර ගන්න — වැරදි අංකයක් නම් ගෙවීම ඔබේ දරුවාගේ ගිණුමට ගැලපිය නොහැක.</span>
+        </div>
+        <div style="margin-bottom:14px;">
+          <label for="manualStudentName" class="input-label">Full name<span class="si">සම්පූර්ණ නම</span></label>
+          <input type="text" id="manualStudentName" class="text-input" placeholder="e.g. K. D. Perera" autocomplete="off">
+        </div>
+        <div>
+          <label for="manualStudentIndex" class="input-label">Student index number<span class="si">දර්ශක අංකය</span></label>
+          <input type="text" id="manualStudentIndex" class="text-input" inputmode="numeric" placeholder="e.g. 10234" autocomplete="off">
+        </div>
+      </div>
     </div>
 
     <div class="field">
@@ -852,6 +735,10 @@
             <option value="" selected disabled>Select second month…</option>
           </select>
         </div>
+        <p id="monthDuplicateWarning" class="reference-warning" style="display:none; margin-top:12px;">
+          Please choose two different months.
+          <span class="si">කරුණාකර වෙනස් මාස දෙකක් තෝරන්න.</span>
+        </p>
       </div>
     </div>
 
@@ -865,8 +752,18 @@
       </div>
 
       <div class="reference-warning" role="alert">
-        Payment will not be updated if the correct reference number is not entered.
-        <span class="si">නිවැරදි යොමු අංකය ඇතුළත් නොකරන ලද ගෙවීම් යාවත්කාලීන නොවේ.</span>
+        ⚠️ You <strong>must</strong> enter this reference number in the bank transfer remarks <strong>and</strong> in the email subject line. Payments cannot be matched to your account without it.
+        <span class="si">⚠️ මෙම යොමු අංකය බැංකු මාරුවේ Remarks / Reference තුළ <strong>සහ</strong> ඊමේල් subject line එකේද ඇතුළත් කළ <strong>යුතුමය</strong>. එසේ නොකළහොත් ගෙවීම ඔබගේ ගිණුමට යාවත්කාලීන කළ නොහැක.</span>
+      </div>
+
+      <div class="payment-steps" aria-label="Payment steps">
+        <p class="payment-steps-title">What to do next</p>
+        <ol>
+          <li>Copy the reference number above.</li>
+          <li>Make the bank transfer using the account details below.</li>
+          <li>Paste the reference into the bank app field called <strong>Reference</strong>, <strong>Remarks</strong>, or <strong>Description</strong> — exactly as shown, no changes.</li>
+          <li>Email your receipt to the office using the address shown below.</li>
+        </ol>
       </div>
 
       <dl class="summary" id="summary"></dl>
@@ -878,61 +775,51 @@
         <div class="bank-row"><span>Account name<span class="si">ගිණුම් නාමය</span></span><span>D S Senanayake College — Sports Academies</span></div>
         <div class="bank-row"><span>Account number<span class="si">ගිණුම් අංකය</span></span><span>0000 1234 5678</span></div>
       </div>
-      <p class="instructions">
-        Transfer the <strong id="instrSport">—</strong> fee for <strong id="instrMonth">—</strong> to the account above via online banking, and enter <strong id="instrRef">—</strong> exactly as the transfer reference / remark. This lets the payment be matched to the student automatically.
-        <span class="si">ඉහත බැංකු ගිණුමට <strong id="instrSportSi">—</strong> ගාස්තුව <strong id="instrMonthSi">—</strong> සඳහා මාරු කිරීමේදී, Reference / Remarks / Description යන ස්ථානයේ යොමු අංකය <strong id="instrRefSi">—</strong> නිවැරදිව ඇතුළත් කරන්න. එවිට ඔබගේ ගෙවීම හඳුනාගත හැක.</span>
-      </p>
+
     </div>
 
   </div>
 
-  <!-- PDF Upload Card -->
-  <div class="card card-upload">
-    <p class="step-label"><span class="step-num">&#128196;</span> Upload bank slip<span class="si">බැංකු රිසිට්</span></p>
+  <!-- Email Receipt Card -->
+  <div class="card" id="uploadCard">
+    <p class="step-label"><span class="step-num">4</span> Email your receipt<span class="si">රිසිට්පත ඊමේල් කරන්න</span></p>
+    <p class="upload-note">
+      After transferring, email your bank receipt to the address below with the subject line shown.
+      <span class="si" style="display:block;margin-top:6px;">ගෙවීම සිදු කළ පසු, බැංකු රිසිට්පත පහත ඊමේල් ලිපිනයට, දක්වා ඇති subject line එක සමඟ යවන්න.</span>
+    </p>
 
-    <div class="upload-zone" id="uploadZone">
-      <input type="file" id="pdfInput" accept="application/pdf,image/*" aria-label="Upload bank slip">
-      <div class="upload-icon">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 2L10 13M10 2L7 5M10 2L13 5" stroke="#e9d3a3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M3 14V16C3 17.1 3.9 18 5 18H15C16.1 18 17 17.1 17 16V14" stroke="#e9d3a3" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
+    <div class="bank-panel" style="margin-top:4px;">
+      <h3>Send to<span class="si">යොමු කරන්න</span></h3>
+      <div class="bank-row" style="align-items:center;">
+        <span>Email<span class="si">ඊමේල්</span></span>
+        <span><a id="emailMailtoLink" href="mailto:dsscrs2@gmail.com">dsscrs2@gmail.com</a></span>
       </div>
-      <p class="upload-label">Upload your bank transfer receipt</p>
-      <p class="upload-sub">PDF or image (screenshot) accepted</p>
-      <div class="upload-howto">
-        <p class="howto-title">📄 For best results — upload as PDF</p>
-        <ul>
-          <li><strong>HNB / Sampath / BOC:</strong> Open the receipt in the app → tap <em>Share</em> or <em>Download</em> → save as PDF</li>
-          <li><strong>People's Bank:</strong> On the Acknowledgment screen → tap the <em>share icon</em> → choose <em>Save to Files</em> as PDF</li>
-          <li><strong>Any bank:</strong> Open in browser → tap <em>⋮ menu</em> → <em>Share → Print → Save as PDF</em></li>
-        </ul>
-        <p class="howto-note">💡 Can't find the PDF? You can also upload a screenshot — but PDF gives better accuracy.</p>
-      </div>
-    </div>
-
-    <div class="extract-result" id="extractResult">
-      <div class="extract-filename" id="extractFilename">
-        <span id="extractFilenameTxt"></span>
-        <button class="extract-remove" id="extractRemove" type="button" title="Remove">✕</button>
-      </div>
-
-      <div class="extract-status" id="extractStatus" style="display:none;">
-        <div class="spinner"></div>
-        <span id="extractStatusTxt">Reading PDF…</span>
-      </div>
-
-      <div class="extract-error" id="extractError"></div>
-
-      <div id="extractContent" style="display:none;">
-        <textarea class="extract-text" id="extractText" readonly spellcheck="false"></textarea>
-        <button class="extract-copy-btn" id="extractCopyBtn" type="button">Copy text</button>
-        <div class="pdf-nudge" id="pdfNudge" style="display:none;">
-          📄 <strong>Tip:</strong> Next time, share the receipt as a <strong>PDF</strong> from your banking app for faster and more accurate reading.
-          <span class="si">ඊළඟ අවස්ථාවේ බැංකු app එකෙන් PDF ලෙස share කරන්න — වඩා හොඳ accuracy ලැබේ.</span>
+      <div class="bank-row" style="align-items:flex-start; flex-direction:column; gap:6px;">
+        <span style="color:var(--ink-soft); font-size:14px;">Subject<span class="si" style="display:inline; font-size:11.5px; margin-left:4px;">ශීර්ෂය</span></span>
+        <div style="display:flex; align-items:center; gap:8px; width:100%;">
+          <span id="emailSubjectDisplay" style="font-weight:700; color:var(--ink); font-size:14.5px; flex:1; min-width:0; overflow-wrap:anywhere;">—</span>
+          <button id="copySubjectBtn" type="button" style="
+            flex:0 0 auto;
+            background:var(--navy);
+            color:#fff;
+            border:none;
+            padding:7px 13px;
+            border-radius:7px;
+            font-family:'Manrope',sans-serif;
+            font-weight:700;
+            font-size:12px;
+            cursor:pointer;
+            transition:filter .15s ease;
+            white-space:nowrap;
+          ">Copy</button>
         </div>
       </div>
     </div>
+
+    <p class="instructions" style="margin-top:14px;">
+      Tap the email address to open your mail app — the address and subject will be filled in automatically. Attach your bank receipt before sending.
+      <span class="si">ඊමේල් ලිපිනය tap කළ විට ඔබේ mail app එක විවෘත වේ — ලිපිනය සහ subject line ස්වයංක්‍රීයව පිරී යනු ඇත. යැවීමට පෙර බැංකු රිසිට්පත ඇමිණීම අමතක නොකරන්න.</span>
+    </p>
   </div>
 
 </main>
@@ -943,6 +830,8 @@
   // ---- Config ----
   const SUPABASE_URL = "https://yssmwhsjxrhoodrzbead.supabase.co";
   const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlzc213aHNqeHJob29kcnpiZWFkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM0NzMzNTgsImV4cCI6MjA4OTA0OTM1OH0.IO4F6Ug5NlHfY0hdQPgoim45OgXiGDVWeEq0MGzA3Ms";
+  window.SUPABASE_URL = SUPABASE_URL;
+  window.SUPABASE_KEY = SUPABASE_KEY;
 
   // ---- Static reference data ----
   const sports = [
@@ -978,6 +867,9 @@
   const btn1Month = document.getElementById("btn1Month");
   const btn2Month = document.getElementById("btn2Month");
   const result = document.getElementById("result");
+  const manualStudentFields = document.getElementById("manualStudentFields");
+  const manualStudentName = document.getElementById("manualStudentName");
+  const manualStudentIndex = document.getElementById("manualStudentIndex");
 
   let paymentMonths = 1; // 1 or 2 — max is two months per transfer
 
@@ -987,9 +879,6 @@
     opt.textContent = `${s.name} (${s.code})`;
     sportSelect.appendChild(opt);
   });
-  sportSelect.value = "0";
-  sportSelect.disabled = true;
-
   function setStudentPlaceholder(text, disabled) {
     students = [];
     studentSelect.innerHTML = "";
@@ -1027,6 +916,7 @@
 
   function renderStudentOptions(records) {
     students = records;
+    window.currentStudentsList = students;
     studentSelect.innerHTML = "";
 
     const placeholder = document.createElement("option");
@@ -1042,6 +932,11 @@
       opt.textContent = `${s.name} - ${s.index}`;
       studentSelect.appendChild(opt);
     });
+
+    const otherOpt = document.createElement("option");
+    otherOpt.value = "other";
+    otherOpt.textContent = "My name is not listed…";
+    studentSelect.appendChild(otherOpt);
 
     studentSelect.disabled = false;
     checkAndGenerate();
@@ -1073,9 +968,12 @@
 
   async function loadStudentsFromDatabase() {
     setStudentPlaceholder("Loading students...", true);
+    const errorBox = document.getElementById("studentLoadError");
+    if (errorBox) errorBox.style.display = "none";
 
     if (!window.supabase || !window.supabase.createClient) {
       setStudentPlaceholder("Unable to load students", true);
+      if (errorBox) errorBox.style.display = "block";
       return;
     }
 
@@ -1086,10 +984,19 @@
     } catch (err) {
       console.error("loadStudentsFromDatabase:", err);
       setStudentPlaceholder("Unable to load students", true);
+      if (errorBox) errorBox.style.display = "block";
     }
   }
 
   setStudentPlaceholder("Loading students...", true);
+
+  const retryStudentsBtn = document.getElementById("retryStudentsBtn");
+  if (retryStudentsBtn) {
+    retryStudentsBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      loadStudentsFromDatabase();
+    });
+  }
 
   // Both dropdowns share the same chronological month list, so array index
   // order IS chronological order — no separate date-sort key needed.
@@ -1122,21 +1029,38 @@
   btn1Month.addEventListener("click", () => setPaymentMonths(1));
   btn2Month.addEventListener("click", () => setPaymentMonths(2));
 
+  function getSelectedStudent(stIdx) {
+    if (stIdx === "other") {
+      const name = manualStudentName.value.trim();
+      const index = manualStudentIndex.value.trim();
+      if (!name || !index) return null;
+      return { name, index };
+    }
+    return students[stIdx];
+  }
+
   function checkAndGenerate() {
     const sIdx = sportSelect.value;
     const stIdx = studentSelect.value;
     const mIdx = monthSelect.value;
     const mIdx2 = monthSelect2.value;
 
+    if (manualStudentFields) manualStudentFields.style.display = (stIdx === "other") ? "block" : "none";
+
     const needsSecondMonth = paymentMonths === 2;
     const secondMonthMissing = needsSecondMonth && mIdx2 === "";
     const secondMonthDuplicate = needsSecondMonth && mIdx2 !== "" && mIdx2 === mIdx;
 
+    const dupWarning = document.getElementById("monthDuplicateWarning");
+    if (dupWarning) dupWarning.style.display = secondMonthDuplicate ? "block" : "none";
+
     const sport = sports[sIdx];
-    const student = students[stIdx];
+    const student = getSelectedStudent(stIdx);
 
     if (!sport || !student || mIdx === "" || secondMonthMissing || secondMonthDuplicate) {
       result.classList.remove("show");
+      const uc = document.getElementById("uploadCard");
+      if (uc) uc.classList.remove("show");
       return;
     }
 
@@ -1161,17 +1085,29 @@
     }
 
     document.getElementById("refCode").textContent = reference;
+
+    // Keep the current selection available for the upload/verification step
+    window.currentPaymentContext = {
+      reference,
+      sportName: sport.name,
+      studentName: student.name,
+      studentIndex: student.index,
+      monthLabel: monthLabel.replace("&amp;", "&")
+    };
+    const uc = document.getElementById("uploadCard");
+    if (uc) uc.classList.add("show");
+
     document.getElementById("summary").innerHTML = `
       <dt>Sport <span class="si">ක්‍රීඩාව</span></dt><dd>${sport.name}</dd>
       <dt>Student <span class="si">ශිෂ්‍යයා</span></dt><dd>${student.name} (${student.index})</dd>
       <dt>${monthDtLabel} <span class="si">${monthDtLabelSi}</span></dt><dd>${monthLabel}</dd>
     `;
-    document.getElementById("instrSport").textContent = sport.name;
-    document.getElementById("instrMonth").textContent = monthLabel.replace("&amp;", "&");
-    document.getElementById("instrRef").textContent = reference;
-    document.getElementById("instrSportSi").textContent = sport.name;
-    document.getElementById("instrMonthSi").textContent = monthLabel.replace("&amp;", "&");
-    document.getElementById("instrRefSi").textContent = reference;
+
+    // Build email subject: "Student Name – Month(s)"
+    const emailSubject = `${student.name} – ${monthLabel.replace("&amp;", "&")}`;
+    const mailtoHref = `mailto:dsscrs2@gmail.com?subject=${encodeURIComponent(emailSubject)}`;
+    document.getElementById("emailSubjectDisplay").textContent = emailSubject;
+    document.getElementById("emailMailtoLink").href = mailtoHref;
 
     result.classList.add("show");
   }
@@ -1180,264 +1116,60 @@
     el.addEventListener("change", checkAndGenerate)
   );
 
+  [manualStudentName, manualStudentIndex].forEach(el =>
+    el.addEventListener("input", checkAndGenerate)
+  );
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", loadStudentsFromDatabase);
   } else {
     loadStudentsFromDatabase();
   }
 
+  // Copies text with a fallback for browsers/in-app webviews (WhatsApp,
+  // Facebook, older Android) where navigator.clipboard is blocked or
+  // missing — so the button always gives feedback instead of doing nothing.
+  function copyToClipboard(text, btn) {
+    const original = btn.textContent;
+    const showResult = (ok) => {
+      btn.textContent = ok ? "Copied ✓" : "Couldn't copy — please select & copy manually";
+      setTimeout(() => (btn.textContent = original), ok ? 1500 : 2500);
+    };
+    const legacyCopy = () => {
+      try {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        const ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+        showResult(ok);
+      } catch (e) {
+        showResult(false);
+      }
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => showResult(true)).catch(legacyCopy);
+    } else {
+      legacyCopy();
+    }
+  }
+
   document.getElementById("copyBtn").addEventListener("click", function () {
     const ref = document.getElementById("refCode").textContent;
-    navigator.clipboard.writeText(ref).then(() => {
-      const btn = this;
-      const original = btn.textContent;
-      btn.textContent = "Copied ✓";
-      setTimeout(() => (btn.textContent = original), 1500);
-    });
+    copyToClipboard(ref, this);
+  });
+
+  document.getElementById("copySubjectBtn").addEventListener("click", function () {
+    const subject = document.getElementById("emailSubjectDisplay").textContent;
+    if (!subject || subject === "—") return;
+    copyToClipboard(subject, this);
   });
 </script>
 
-<script>
-  // Load Tesseract.js (UMD build — works without type="module")
-</script>
-<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-<script type="module">
-  // ── DOM refs ──────────────────────────────────────────────────────────────
-  const uploadZone         = document.getElementById("uploadZone");
-  const pdfInput           = document.getElementById("pdfInput");
-  const extractResult      = document.getElementById("extractResult");
-  const extractFilenameTxt = document.getElementById("extractFilenameTxt");
-  const extractRemove      = document.getElementById("extractRemove");
-  const extractStatus      = document.getElementById("extractStatus");
-  const extractStatusTxt   = document.getElementById("extractStatusTxt");
-  const extractError       = document.getElementById("extractError");
-  const extractContent     = document.getElementById("extractContent");
-  const extractText        = document.getElementById("extractText");
-  const extractCopyBtn     = document.getElementById("extractCopyBtn");
-  const pdfNudge           = document.getElementById("pdfNudge");
 
-  // ── Helpers ───────────────────────────────────────────────────────────────
-  function setStatus(msg) {
-    extractStatusTxt.textContent = msg;
-    extractStatus.style.display = "flex";
-  }
-  function hideStatus() { extractStatus.style.display = "none"; }
-
-  function showError(msg) {
-    hideStatus();
-    extractError.textContent = msg;
-    extractError.classList.add("show");
-    extractContent.style.display = "none";
-  }
-
-  function showResult(text, showNudge = false) {
-    hideStatus();
-    extractError.classList.remove("show");
-    extractText.value = text;
-    extractContent.style.display = "block";
-    pdfNudge.style.display = showNudge ? "block" : "none";
-  }
-
-  function reset() {
-    pdfInput.value = "";
-    extractResult.classList.remove("show");
-    extractError.classList.remove("show");
-    extractContent.style.display = "none";
-    hideStatus();
-    extractText.value = "";
-    pdfNudge.style.display = "none";
-  }
-
-  // ── Step 1: PDF.js text-layer extraction ─────────────────────────────────
-  let _pdfjsMod = null;
-  async function getPdfjs() {
-    if (_pdfjsMod) return _pdfjsMod;
-    _pdfjsMod = await import("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs");
-    _pdfjsMod.GlobalWorkerOptions.workerSrc =
-      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs";
-    return _pdfjsMod;
-  }
-
-  async function extractViaTextLayer(arrayBuffer) {
-    const mod = await getPdfjs();
-    const pdf = await mod.getDocument({ data: arrayBuffer }).promise;
-    let fullText = "";
-    for (let i = 1; i <= pdf.numPages; i++) {
-      const page = await pdf.getPage(i);
-      const content = await page.getTextContent();
-      let lastY = null, pageText = "";
-      for (const item of content.items) {
-        if (!item.str) continue;
-        if (lastY !== null && Math.abs(item.transform[5] - lastY) > 3) pageText += "\n";
-        pageText += item.str;
-        lastY = item.transform[5];
-      }
-      fullText += pageText.trim();
-      if (i < pdf.numPages) fullText += "\n\n--- Page " + (i + 1) + " ---\n\n";
-    }
-    return fullText.trim();
-  }
-
-  // ── Preprocessing: invert dark-bg, binarise ───────────────────────────────
-  function preprocessCanvas(srcCanvas) {
-    const dst = document.createElement("canvas");
-    dst.width = srcCanvas.width;
-    dst.height = srcCanvas.height;
-    const ctx = dst.getContext("2d");
-    ctx.fillStyle = "#fff";
-    ctx.fillRect(0, 0, dst.width, dst.height);
-    ctx.drawImage(srcCanvas, 0, 0);
-    const imageData = ctx.getImageData(0, 0, dst.width, dst.height);
-    const d = imageData.data;
-    let darkPixels = 0;
-    for (let i = 0; i < d.length; i += 4) {
-      if (0.299 * d[i] + 0.587 * d[i+1] + 0.114 * d[i+2] < 100) darkPixels++;
-    }
-    const isDarkBg = darkPixels > (d.length / 4) * 0.35;
-    for (let i = 0; i < d.length; i += 4) {
-      let r = d[i], g = d[i+1], b = d[i+2];
-      if (isDarkBg) { r = 255-r; g = 255-g; b = 255-b; }
-      const val = (0.299*r + 0.587*g + 0.114*b) > 140 ? 255 : 0;
-      d[i] = d[i+1] = d[i+2] = val;
-    }
-    ctx.putImageData(imageData, 0, 0);
-    return dst;
-  }
-
-  // ── Step 2a: PDF → canvas → Tesseract (image-based PDFs) ─────────────────
-  async function extractViaPdfOCR(arrayBuffer) {
-    const mod = await getPdfjs();
-    const pdf = await mod.getDocument({ data: arrayBuffer }).promise;
-    let allText = "";
-    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-      setStatus(`OCR: rendering page ${pageNum} of ${pdf.numPages}…`);
-      const page = await pdf.getPage(pageNum);
-      const scale = 2.5;
-      const viewport = page.getViewport({ scale });
-      const canvas = document.createElement("canvas");
-      canvas.width = viewport.width;
-      canvas.height = viewport.height;
-      await page.render({ canvasContext: canvas.getContext("2d"), viewport }).promise;
-      setStatus(`OCR: reading page ${pageNum}…`);
-      const processed = preprocessCanvas(canvas);
-      const result = await Tesseract.recognize(processed, "eng", {
-        logger: m => {
-          if (m.status === "recognizing text")
-            setStatus(`OCR page ${pageNum}: ${Math.round(m.progress * 100)}%`);
-        }
-      });
-      const t = result.data.text.trim();
-      if (t) { allText += t; if (pageNum < pdf.numPages) allText += "\n\n---\n\n"; }
-    }
-    return allText.trim();
-  }
-
-  // ── Step 2b: Image file → canvas → Tesseract ─────────────────────────────
-  async function extractViaImageOCR(file) {
-    setStatus("Loading image…");
-    const bitmap = await createImageBitmap(file);
-    const scale = Math.min(1, 2000 / Math.max(bitmap.width, bitmap.height)); // cap at 2000px
-    const canvas = document.createElement("canvas");
-    canvas.width  = bitmap.width  * (scale < 1 ? scale : 2);
-    canvas.height = bitmap.height * (scale < 1 ? scale : 2);
-    const ctx = canvas.getContext("2d");
-    ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-    setStatus("OCR: reading image… (5–10s)");
-    const processed = preprocessCanvas(canvas);
-    const result = await Tesseract.recognize(processed, "eng", {
-      logger: m => {
-        if (m.status === "recognizing text")
-          setStatus(`OCR: ${Math.round(m.progress * 100)}%`);
-      }
-    });
-    return result.data.text.trim();
-  }
-
-  // ── Main processor ────────────────────────────────────────────────────────
-  async function processFile(file) {
-    if (!file) return;
-
-    extractFilenameTxt.textContent = file.name;
-    extractResult.classList.add("show");
-    extractError.classList.remove("show");
-    extractContent.style.display = "none";
-    pdfNudge.style.display = "none";
-
-    const isImage = file.type.startsWith("image/");
-    const isPdf   = file.type === "application/pdf";
-
-    if (!isPdf && !isImage) {
-      showError("Unsupported file. Please upload a PDF or an image (JPG, PNG) of your bank receipt.");
-      return;
-    }
-
-    // ── Image path: straight to OCR, always show PDF nudge after ──────────
-    if (isImage) {
-      setStatus("Reading image…");
-      try {
-        const text = await extractViaImageOCR(file);
-        if (text) {
-          showResult(text, true); // true = show PDF nudge
-        } else {
-          showError("Could not read text from this image. Try uploading the PDF receipt from your banking app instead.");
-        }
-      } catch (err) {
-        showError("Image OCR failed: " + (err.message || err));
-      }
-      return;
-    }
-
-    // ── PDF path A: text layer (instant) ──────────────────────────────────
-    setStatus("Reading PDF…");
-    const arrayBuffer = await file.arrayBuffer();
-    try {
-      const text = await extractViaTextLayer(arrayBuffer.slice(0));
-      if (text) { showResult(text, false); return; }
-    } catch (_) {}
-
-    // ── PDF path B: image-based PDF → OCR (no nudge, they already used PDF) 
-    try {
-      setStatus("No text layer — starting OCR…");
-      const text = await extractViaPdfOCR(arrayBuffer.slice(0));
-      if (text) {
-        showResult(text, false);
-      } else {
-        showError("OCR returned no text. Try a clearer image or higher-resolution PDF.");
-      }
-    } catch (err) {
-      showError("OCR failed: " + (err.message || err));
-    }
-  }
-
-  // ── Events ────────────────────────────────────────────────────────────────
-  pdfInput.addEventListener("change", (e) => {
-    const file = e.target.files[0];
-    if (file) processFile(file);
-  });
-
-  uploadZone.addEventListener("dragover", (e) => {
-    e.preventDefault();
-    uploadZone.classList.add("drag-over");
-  });
-  uploadZone.addEventListener("dragleave", () => uploadZone.classList.remove("drag-over"));
-  uploadZone.addEventListener("drop", (e) => {
-    e.preventDefault();
-    uploadZone.classList.remove("drag-over");
-    const file = e.dataTransfer.files[0];
-    if (file) processFile(file);
-  });
-
-  extractRemove.addEventListener("click", reset);
-
-  extractCopyBtn.addEventListener("click", () => {
-    const text = extractText.value;
-    if (!text) return;
-    navigator.clipboard.writeText(text).then(() => {
-      const orig = extractCopyBtn.textContent;
-      extractCopyBtn.textContent = "Copied ✓";
-      setTimeout(() => (extractCopyBtn.textContent = orig), 1500);
-    });
-  });
-</script>
 </body>
 </html>
